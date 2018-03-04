@@ -1,0 +1,115 @@
+# -*- coding: utf-8 -*-
+
+# Form implementation generated from reading ui file 'main.ui'
+#
+# Created: Mon May 17 12:22:51 2010
+#      by: PyQt4 UI code generator 4.7
+#
+# WARNING! All changes made in this file will be lost!
+
+from PyQt4 import QtCore, QtGui
+
+class Ui_Form(object):
+    def setupUi(self, Form):
+        Form.setObjectName("Form")
+        Form.resize(662, 393)
+        self.hboxlayout = QtGui.QHBoxLayout(Form)
+        self.hboxlayout.setObjectName("hboxlayout")
+        self.widget = QtGui.QWidget(Form)
+        self.widget.setObjectName("widget")
+        self.plotBtn = QtGui.QPushButton(self.widget)
+        self.plotBtn.setGeometry(QtCore.QRect(130, 340, 71, 23))
+        self.plotBtn.setObjectName("plotBtn")
+        self.save_figure_Button = QtGui.QPushButton(self.widget)
+        self.save_figure_Button.setGeometry(QtCore.QRect(210, 340, 61, 23))
+        self.save_figure_Button.setObjectName("save_figure_Button")
+        self.label = QtGui.QLabel(self.widget)
+        self.label.setGeometry(QtCore.QRect(0, 10, 51, 21))
+        self.label.setObjectName("label")
+        self.label_2 = QtGui.QLabel(self.widget)
+        self.label_2.setGeometry(QtCore.QRect(0, 320, 71, 21))
+        self.label_2.setObjectName("label_2")
+        self.funcexp = QtGui.QLineEdit(self.widget)
+        self.funcexp.setGeometry(QtCore.QRect(80, 10, 221, 20))
+        self.funcexp.setObjectName("funcexp")
+        self.data1 = QtGui.QTextEdit(self.widget)
+        self.data1.setGeometry(QtCore.QRect(60, 130, 211, 181))
+        self.data1.setObjectName("data1")
+        self.label_3 = QtGui.QLabel(self.widget)
+        self.label_3.setGeometry(QtCore.QRect(0, 130, 31, 21))
+        self.label_3.setObjectName("label_3")
+        self.plotWidget = MPL_Widget(self.widget)
+        self.plotWidget.setGeometry(QtCore.QRect(300, 0, 361, 381))
+        self.plotWidget.setObjectName("plotWidget")
+        self.label_6 = QtGui.QLabel(self.plotWidget)
+        self.label_6.setGeometry(QtCore.QRect(130, 360, 111, 16))
+        self.label_6.setObjectName("label_6")
+        self.comboBox = QtGui.QComboBox(self.widget)
+        self.comboBox.setGeometry(QtCore.QRect(60, 320, 61, 20))
+        self.comboBox.setAcceptDrops(False)
+        self.comboBox.setObjectName("comboBox")
+        self.comboBox.addItem("")
+        self.comboBox.addItem("")
+        self.comboBox.addItem("")
+        self.comboBox.addItem("")
+        self.label_4 = QtGui.QLabel(self.widget)
+        self.label_4.setGeometry(QtCore.QRect(0, 40, 71, 20))
+        self.label_4.setObjectName("label_4")
+        self.label_5 = QtGui.QLabel(self.widget)
+        self.label_5.setGeometry(QtCore.QRect(0, 70, 61, 20))
+        self.label_5.setObjectName("label_5")
+        self.samplefreq = QtGui.QLineEdit(self.widget)
+        self.samplefreq.setGeometry(QtCore.QRect(80, 40, 41, 20))
+        self.samplefreq.setObjectName("samplefreq")
+        self.samplepoint = QtGui.QLineEdit(self.widget)
+        self.samplepoint.setGeometry(QtCore.QRect(80, 70, 41, 20))
+        self.samplepoint.setObjectName("samplepoint")
+        self.getdata_Button = QtGui.QPushButton(self.widget)
+        self.getdata_Button.setGeometry(QtCore.QRect(210, 70, 71, 23))
+        self.getdata_Button.setObjectName("getdata_Button")
+        self.label_8 = QtGui.QLabel(self.widget)
+        self.label_8.setGeometry(QtCore.QRect(290, 280, 16, 16))
+        self.label_8.setObjectName("label_8")
+        self.label_7 = QtGui.QLabel(self.widget)
+        self.label_7.setGeometry(QtCore.QRect(290, 250, 21, 21))
+        self.label_7.setObjectName("label_7")
+        self.sample_period_time = QtGui.QLineEdit(self.widget)
+        self.sample_period_time.setGeometry(QtCore.QRect(230, 40, 41, 20))
+        self.sample_period_time.setObjectName("sample_period_time")
+        self.label_9 = QtGui.QLabel(self.widget)
+        self.label_9.setGeometry(QtCore.QRect(130, 40, 101, 20))
+        self.label_9.setObjectName("label_9")
+        self.hboxlayout.addWidget(self.widget)
+
+        self.retranslateUi(Form)
+        QtCore.QMetaObject.connectSlotsByName(Form)
+
+    def retranslateUi(self, Form):
+        Form.setWindowTitle(QtGui.QApplication.translate("Form", "简易FFT演示程序v0.4", None, QtGui.QApplication.UnicodeUTF8))
+        self.plotBtn.setText(QtGui.QApplication.translate("Form", "绘图", None, QtGui.QApplication.UnicodeUTF8))
+        self.save_figure_Button.setText(QtGui.QApplication.translate("Form", "保存图片", None, QtGui.QApplication.UnicodeUTF8))
+        self.label.setText(QtGui.QApplication.translate("Form", "函数式", None, QtGui.QApplication.UnicodeUTF8))
+        self.label_2.setText(QtGui.QApplication.translate("Form", "FFT点数", None, QtGui.QApplication.UnicodeUTF8))
+        self.funcexp.setText(QtGui.QApplication.translate("Form", "0.5*sin(2*pi*50*x)+0.5*sin(2*pi*30*x)", None, QtGui.QApplication.UnicodeUTF8))
+        self.data1.setHtml(QtGui.QApplication.translate("Form", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:\'宋体\'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">[ 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1.]</p></body></html>", None, QtGui.QApplication.UnicodeUTF8))
+        self.label_3.setText(QtGui.QApplication.translate("Form", "数组", None, QtGui.QApplication.UnicodeUTF8))
+        self.label_6.setText(QtGui.QApplication.translate("Form", "频率(omega/π)", None, QtGui.QApplication.UnicodeUTF8))
+        self.comboBox.setItemText(0, QtGui.QApplication.translate("Form", "256", None, QtGui.QApplication.UnicodeUTF8))
+        self.comboBox.setItemText(1, QtGui.QApplication.translate("Form", "512", None, QtGui.QApplication.UnicodeUTF8))
+        self.comboBox.setItemText(2, QtGui.QApplication.translate("Form", "1024", None, QtGui.QApplication.UnicodeUTF8))
+        self.comboBox.setItemText(3, QtGui.QApplication.translate("Form", "2048", None, QtGui.QApplication.UnicodeUTF8))
+        self.label_4.setText(QtGui.QApplication.translate("Form", "采样频率(Hz)", None, QtGui.QApplication.UnicodeUTF8))
+        self.label_5.setText(QtGui.QApplication.translate("Form", "采样点数", None, QtGui.QApplication.UnicodeUTF8))
+        self.samplefreq.setText(QtGui.QApplication.translate("Form", "1000", None, QtGui.QApplication.UnicodeUTF8))
+        self.samplepoint.setText(QtGui.QApplication.translate("Form", "512", None, QtGui.QApplication.UnicodeUTF8))
+        self.getdata_Button.setText(QtGui.QApplication.translate("Form", "获取数组", None, QtGui.QApplication.UnicodeUTF8))
+        self.label_8.setText(QtGui.QApplication.translate("Form", "度", None, QtGui.QApplication.UnicodeUTF8))
+        self.label_7.setText(QtGui.QApplication.translate("Form", "幅", None, QtGui.QApplication.UnicodeUTF8))
+        self.sample_period_time.setText(QtGui.QApplication.translate("Form", "0.001", None, QtGui.QApplication.UnicodeUTF8))
+        self.label_9.setText(QtGui.QApplication.translate("Form", "采样间隔时间(s)", None, QtGui.QApplication.UnicodeUTF8))
+
+from mpl_pyqt4_widget import MPL_Widget
